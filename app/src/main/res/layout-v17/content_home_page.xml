@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ainosoft.com.androiddemo.HomePage"
+    android:background="#333"
+    android:id="@+id/homepage"
+    android:weightSum="1">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#8B4598"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:id="@+id/userIcon"
+            android:src="@drawable/user1"
+            android:layout_gravity="top|left|bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Home"
+            android:id="@+id/pageTitle"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:textSize="32dp"
+            android:layout_weight="1.00"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/homeSearch"
+            android:layout_weight="0.06"
+            android:src="@drawable/search" />
+    </TableRow>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        style="@style/AppTheme"
+        android:background="#96989A"
+        android:outlineProvider="background"
+        android:accessibilityLiveRegion="polite"
+        android:layout_marginRight="0dp">
+
+        <TextClock
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:id="@+id/systemtime"
+            android:layout_gravity="center_horizontal|top"
+            android:background="#ffffff" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/startButton"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:id="@+id/pauseButton"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp" />
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="left|bottom"
+            android:id="@+id/webcontainer">
+
+            <WebView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/wheremi" />
+        </TableRow>
+
+    </FrameLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#8B4598"
+        android:layout_gravity="bottom"
+        android:baselineAligned="true"
+        android:gravity="bottom">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:id="@+id/updates"
+            android:layout_marginLeft="45dp"
+            android:src="@drawable/updates" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/setting"
+            android:src="@drawable/settings"
+            android:layout_marginLeft="50dp" />
+
+    </TableRow>
+</LinearLayout>
