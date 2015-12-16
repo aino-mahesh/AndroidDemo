@@ -10,14 +10,27 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * @author mahesh@ainosoft.com
+ * Starting point of an application
+ * This will be first activity called when the application starts
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /*
+        overrrided method of Activity
+        will be called every time an activity loads in
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
+    /*
+        overrided method where we could define any specific option
+        for this activity
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

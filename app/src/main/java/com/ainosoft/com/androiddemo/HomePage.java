@@ -21,6 +21,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.Handler;
 
+/**
+ * @author mahesh@ainosoft.com
+ * This class is the main home page of the app
+ */
 public class HomePage extends AppCompatActivity {
 
     @Override
@@ -28,10 +32,15 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        //we have web panel in our app and where we are loading
+        //html code
         WebView browser = (WebView) findViewById(R.id.wheremi);
-        browser.loadUrl("http://www.tutorialspoint.com");
+        browser.loadUrl("http://local.ainosoft.com:8082/ui-trupublic-user-host-latest/UserHost.html");
      }
 
+    /**
+     * Class to load whatever is been clicked on the web view
+     */
     private class MyBrowser extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
